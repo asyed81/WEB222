@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script src="script.js"></script>  
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="pics/logo.svg">
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+    </style>
+
+
+    <meta charset="utf-8" />
+    <title>WEB222 Store</title>
+  </head>
+  <body>
+
+    <!--
+      Introduction
+      ------------
+
+      You are asked to create an online store in HTML, CSS, and JavaScript.
+      Please implement a store with all of the following requirements.
+
+      You may remove this comment and place all your HTML in this file.
+
+      Requirements:
+
+      1. Use a JavaScript or JSON file to describe your store's items, and each
+      item's details.  For example, the price, title, description, image URL, etc.
+      should all be properties on an Object, and these Objects should all be stored
+      in one or more Arrays, for example:
+
+      [
+        {
+          name: 'Name of product',
+          description: 'Full desc of this item...'
+          price: 100,                        // NOTE: prices are often done in whole cents and then formatted to dollars/cents
+          category: 'category1',             // category of this item
+          imageUrl: 'images/item-1234.jpg',  // relative URL to image of this item
+        },
+        ...
+      ]
+
+      2. Use JavaScript and DOM programming to build the items in your store (see
+      details below on requirements).  Instead of hard-coding everything in HTML,
+      write functions to generate the cards for each item programmatically (similar
+      to how you built the countries table UI in the previous assignment).
+
+      3. Include a header across the top with your store's name, a logo,
+      and use a different background colour, web font, etc. Your header should
+      include info about what the store is, what it sells, etc.  Use some images
+      to try and draw the user in. NOTE: place all your site's images in the
+      `src/images/` directory.
+
+      4. Below the header, a multi-column layout of items you can purchase in the
+      store.  You must have at least 10 items in your store, and at least 2
+      categories of items. For example, if you are selling clothing, you might
+      have categories for Men, Women, and Children, and each category would have
+      its own set of items.  Each item should include:
+      
+        - a picture of the item
+        - the item's name or title
+        - a complete description of the item
+        - a category (i.e., each item must belong to one or more categories)
+        - a price, formatted in Canadian Dollars (i.e., en-CA)
+      
+      Each item should be its own "card" (i.e., some kind of box around each item
+      separating one from the next, with suitable whitespace between).  The HTML
+      for these cards should be generated from your JavaScript or JSON data (see 1.
+      and 2. above).
+
+      5. A category menu or "sidebar" (left, right, or top depending on your design)
+      showing the different categories of items in your store.  If a
+      user clicks on one of the categories, use CSS and JavaScript to hide all
+      other items in the store (i.e., only show items for the chosen category).
+      Make sure you include a way to return to seeing all categories, and make it
+      obvious to the user that they are only seeing a partial list of items when
+      you filter by category (i.e., use CSS and HTML to change things somehow).
+
+      6. Below the store items, a footer with the name of the store, any relevant
+      links you need to give users.  Include links and icons to any social media
+      for your store (Facebook, Twitter, etc). NOTE: you don't have to create such
+      accounts, but you can provide links to imaginary accounts.
+
+      7. Use at least two different Web Fonts for your store.  The titles should
+      be different from any regular text.  Use a free font service like
+      https://fonts.google.com/ or any other that you choose.  You can also
+      experiment with different font sizes and colours to draw attention toward
+      or away from various parts of your design.
+
+      8. Pick a colour theme using a tool like https://colorhunt.co/ with at least
+      3 colours (primary, secondary, accent), and use them throughout your site
+      for backgrounds, borders, fonts. Your store page needs to look attractive
+      and marks will be given for good a good looking site.  No one will buy from
+      a store that looks like its owners aren't professional or don't care about
+      details.  Also make sure that the colour contrast in your site is suitable
+      for everyone to read.
+
+      9. Use modern CSS to help you achieve your layout.  For example, Flexbox
+      and CSS Grid can help you create professional looking layouts.  Here
+      are some guides to get you started:
+
+       - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+       - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+       
+      You are also welcome to use existing CSS libraries to help you with your layout,
+      but you must also include your own styles (i.e., you can't use a library
+      for everything in your design).
+
+      10. Make sure you don't use copyrighted materials from other sites.  If you use
+      icons, fonts, images, etc., make sure you are legally permitted to reuse them,
+      and include references to indicate where you got them. Some resources to consider:
+
+        - https://unsplash.com/ for images
+        - https://fontawesome.com/ for icons
+        - https://gallery.manypixels.co/ or https://undraw.co/illustrations for illustrations (SVG)
+
+      11. Make sure you reduce the download size of images you include in your
+      store.  Your images shouldn't be larger than 1M in size.  Users don't want to
+      download 10s or 100s of megabytes of data, especially on mobile.  You can use an
+      online tool like https://squoosh.app/ to help you reduce images.  You will
+      lose marks if your images aren't optimized for the web.
+
+      12. Make sure you have no JavaScript or other errors in your Dev Tools Console.
+      Run your site, and test all aspects of it with the Console open, and fix
+      any issues you encounter.
+
+      13. Make sure your code is properly indented and commented, and that you've used
+      good naming practices for variables, functions, ids, classes, etc.
+
+      14. Have fun!  Build something you'd be proud to show future employers in
+      interviews.  Take the time to properly design and implement a beautiful and
+      functional storefront.  Maybe it will inspire you to start your own online business?
+    -->
+
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-info">
+      <a class="navbar-brand" href="file:///Users/alisyed/Desktop/web222/Web%20222%20assignment%205/assignment5/src/index.html">
+        <img src="pics/logo.svg" width="30" height="30" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+
+          <li>
+              <button id="Suvs" style="color:black; background-color: rgb(21,163,183); border-color: rgb(21,163,183);" class="btn btn-outline-dark" type="button">SUVs</button>
+          </li>
+          <li class="nav-item">
+              <button id="Electric" style="color:black; background-color: rgb(21,163,183); border-color: rgb(21,163,183);" class="btn btn-outline-dark" type="button">Electric</button>
+          </li>
+          <li>
+              <button id="two-door" style="color:black; background-color: rgb(21,163,183); border-color: rgb(21,163,183);" class="btn btn-outline-dark" type="button">Coupe</button>
+          </li>
+          <li>
+              <button id="sedan" style="color:black; background-color: rgb(21,163,183); border-color: rgb(21,163,183);" class="btn btn-outline-dark" type="button">Sedan</button>
+          </li>
+        </ul>
+        <a class="navbar-text" href="newsletter_signup.html" style="color:black; font-family: 'Castoro', serif;">
+          Subscibe to our newsletter.
+        </a>
+      </div>
+    </nav>
+
+
+   <div id="test">
+    <h1 id="hQuan" style="text-align: center; padding-top: 280px; color:white;"><span style="font-family: 'JetBrains Mono', monospace;">Fast</span>, <span style="font-family: 'Russo One', sans-serif;
+      ">Bold</span>, <span style="font-family: 'Kaushan Script', cursive;">Smooth</span></h1>
+
+     
+  
+<br>
+ <div class="text-center">
+    <button id="largebtn" type="button" style="background-color: rgb(21,163,183); color: #000;" class="btn btn-primary btn-lg; button-align: center;">View All Vehicles</button>
+  </div>
+  
+</div>
+
+
+<nav class="navbar fixed-bottom navbar-light bg-info">
+  
+  <span class="mx-auto">
+    <a style="color: white; padding-left: 10px;" href="contactus.html">Contact us</a>
+  </span>
+    </nav>
+
+
+ <!--
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://www.carscoops.com/wp-content/uploads/2019/12/2020-BMW-M8-Competition-00.jpg">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Advanced engines respond with millisecond speed and molecular precision to keep performance and efficiency at their peak. A 362-hp 3.0L biturbo V6 powers the S 450 Sedans, while the S 560 models are roused by a 463-hp 4.0L biturbo V8</p>
+       <a href="#" class="btn btn-primary">Go somewhere</a>
+    
+      <br>
+      <hr style="width: 10">
+    <h5>$150,000</h5>  
+    </div>
+    </div>  -->
+  
+
+    <script>
+
+      let allCarBtn = document.getElementById("largebtn");
+      allCarBtn.addEventListener("click", dispAllCars)
+
+      function dispAllCars () {
+        displayCars(cars, "in stock")
+      }
+
+      let suvBtn = document.getElementById("Suvs");
+      suvBtn.addEventListener("click", dispSuvs);
+      function dispSuvs () {
+        displayCars(cars, "SUV")
+      }
+
+      let elec = document.getElementById("Electric");
+      elec.addEventListener("click", dispElec);
+      function dispElec () {
+        displayCars(cars, "electric")
+      }
+
+      let twoDoor = document.getElementById("two-door");
+      twoDoor.addEventListener("click", dispTwoDoor);
+      function dispTwoDoor () {
+        displayCars(cars, "two-door")
+      }
+
+      let sedan = document.getElementById("sedan");
+      sedan.addEventListener("click", dispSedan);
+      function dispSedan () {
+        displayCars(cars, "sedan")
+      }
+      
+       
+
+
+    </script>
+
+
+  </body>
+
+
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<script src="script.js"></script>  
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="pics/logo.svg">
+
+  
+  <style>
+	  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,100&display=swap');
+	  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+	  @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+	  </style>
+	
+
+	<title></title>
+</head>
+<body>
+		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-info">
+				<a class="navbar-brand" href="file:///Users/alisyed/Desktop/web222/Web%20222%20assignment%205/assignment5/src/index.html">
+				  <img src="pics/logo.svg" width="30" height="30" alt="">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				  <span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarText">
+				  <ul class="navbar-nav mr-auto">
+					
+
+				</div>
+			  </nav>
+<br><br>
+
+	 
+<br><br><br><br>
+
+	<br><br>
+
+
+	  <div class="col-sm-6 mx-auto" id="signupcard">
+	  <div class="card text-center" style = "background-color:rgb(21,163,183)">
+			<div class="card-header">
+			  Please enter your email to subscribe
+			</div>
+			<div class="card-body">
+
+					<form action="https://formspree.io/f/mjvpavyq" method="POST">
+							<div class="form-row text-center" style = "background-color:rgb(21,163,183)">
+							  <div class="form-group col-md-6 mx-auto">
+								<input type="email" name="_replyto" class="form-control" id="inputEmail" placeholder="Email" required/>
+							  </div>
+					
+							</div>
+
+							<button id= "submitbtn" type="submit" style = "background-color:black;" class="btn text-white">Subscribe!</button>
+
+						  </form> 
+
+						  <br>
+				<p class="card-text">We do not share your information with any third parties other than formspree.io </p>
+			</div>
+		  </div>
+	  </div>
+
+
+	  <div class="jumbotron jumbotron-fluid bg-danger" id="invalidInputError">
+			<div class="container">
+			  <h1 class="display-6">Invalid</h1>
+			  <p class="lead">Please use a valid email!</p>
+
+			  
+			  <a style="background-color:black" class="btn btn-primary" href="index.html" role="button">Return to homepage</a>				  
+			  <a style="background-color:black" class="btn btn-primary" href="newsletter_signup.html" role="button">Retry</a>				  
+
+			</div>
+		  </div>
+
+
+		<nav class="navbar fixed-bottom navbar-light bg-info">
+  
+				<span class="mx-auto">
+				  <a style="color: white; padding-left: 10px;" href="contactus.html">Contact us</a>
+				</span>
+				  </nav>
+
+<script>
+
+$(invalidInputError).hide();
+
+
+document.getElementById("submitbtn").addEventListener("click", function(){
+
+	async () => {
+	await delay(5);
+	console.log("Waited 5s");
+	$(signupcard).hide();
+$(invalidInputError).show();
+	}
+});
+
+</script>
+
+
+</body>
+</html>
+
+ 
+  };

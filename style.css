@@ -1,0 +1,15 @@
+/* Add any CSS you need to this file. */
+
+body{
+    background-color: black;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(21,163,183);
+    color: black;
+    text-align: center;
+ }
