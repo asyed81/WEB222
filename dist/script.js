@@ -206,7 +206,6 @@ let i = 0;
     }
 
     document.body.append(cards)
-    document.body.append("<br>")
 }
 
 
