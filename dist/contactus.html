@@ -34,8 +34,6 @@
 							  </a>
 					  </nav>
 					   
-<br><br>
-
 <br><br><br>
 
 <div class="col-sm-6 mx-auto" id="signupcard">
@@ -45,15 +43,96 @@
 			  </div>
 			  <div class="card-body">
   
+					
+
+
 					  <form action="https://formspree.io/f/mjvpavyq" method="POST">
-							  <div class="form-row text-center" style = "background-color:rgb(21,163,183)">
-								<div class="form-group col-md-6 mx-auto">
-								  <input type="email" name="_replyto" class="form-control" id="inputEmail" placeholder="Email" required/>
+
+						<div class="form-row">
+								<div class="col-md-4 mb-3 mx-auto">
+								  <label for="fName">Full Name</label>
+								  <input type="text" class="form-control" id="fName" placeholder="Your Name" required>
 								</div>
 
-							  </div>
-							  <br>
-  										<div class="form-group mx-auto">
+								<div class="col-md-4 mb-3 mx-auto">
+										<label for="inputEmail">Email</label>
+										<input type="email" name="_replyto" class="form-control" id="inputEmail" placeholder="your@email.ca" required/>
+									  </div>									  
+									  
+								</div>
+
+
+							<div class="form-row">
+								<div>
+									<label for="city">City</label>
+									<input type="text" id="city" name="city" list="suggestions" class="col-sm-8 form-control mx-auto" required/>
+									<datalist id="suggestions">
+										<option label="Barrie" value="Barrie"></option>
+										<option label="Calgary" value="Calgary"></option>
+										<option label="Charlottetown" value="Charlottetown"></option>
+										<option label="Chibougamau" value="Chibougamau"></option>
+										<option label="Chilliwack" value="Chilliwack"></option>
+										<option label="Cold Lake" value="Cold Lake"></option>
+										<option label="Dorval" value="Dorval"></option>
+										<option label="Edmonton" value="Edmonton"></option>
+										<option label="Flin Flon" value="Flin Flon"></option>
+										<option label="Hamilton" value="Hamilton"></option>
+										<option label="Iqualuit" value="Iqualuit"></option>
+										<option label="Ottawa" value="Ottawa"></option>
+										<option label="Miramichi" value="Miramichi"></option>
+										<option label="Montreal" value="Montreal"></option>
+										<option label="Red Deer" value="Red Deer"></option>
+										<option label="St. John" value="St. John"></option>
+										<option label="St. John's" value="St. John's"></option>
+										<option label="Toronto" value="Toronto"></option>
+										<option label="Vancouver" value="Vancouver"></option>
+										<option label="Whitehorse" value="Whitehorse"></option>
+										<option label="Winnipeg" value="Winnipeg"></option>
+										<option label="Yellowknife" value="Yellowknife"></option>
+									</datalist>
+								</div>
+
+								<div>
+										<label for="postalCode">Postal Code</label>
+										<input class="col-md-7 form-control mx-auto" type="text" class="form-control" id="postalCode"   pattern="^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$" title="Valid Postal Code"	required>
+									  </div>
+
+									  <div class="form-group mx-auto">
+											<label for="inputAddress">Address</label>
+											<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+										  </div>
+
+								</div>
+									
+								<label class="mx-auto mt-2">Reason for contact (please check all that apply)</label>
+								<div class="form-row mb-3">
+									
+										<div class="form-check mx-auto">
+												<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+												<label class="form-check-label" for="defaultCheck2">
+												  Inquiry
+												</label>
+											  </div>
+
+											  <div class="form-check mx-auto">
+													<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+													<label class="form-check-label" for="defaultCheck1">
+													  Comment
+													</label>
+												  </div>
+
+												  <div class="form-check mx-auto">
+														<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+														<label class="form-check-label" for="defaultCheck1">
+														  Order Issue
+														</label>
+													  </div>
+
+
+								</div>
+							 
+							  
+  										<div class="form-group mx-auto col-sm-">
 										<label for="exampleFormControlTextarea1">Please include your message in the text box below</label>
 										
 										<textarea name="message" class="form-control col-md-8 mx-auto" id="exampleFormControlTextarea1" placeholder="Your message." rows="3"></textarea>
@@ -65,8 +144,11 @@
   
 							</form> 
   
-							<br>
+							
 				  <p class="card-text">We do not share your information with any third parties other than formspree.io </p>
+
+				   <input type="hidden" id="myName" name="myNme" value="Ali Syed">
+
 			  </div>
 			</div>
 		</div>
